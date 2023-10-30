@@ -56,20 +56,20 @@ jobs:
         uses: Omegapoint/cydig-azure-compliance-action@v1
         with:
           subscription: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          cydigConfigPath: ${{ env.configFile }}
+          cydigConfigPath: ${{ env.pathCydigConfig }}
 
       - name: 'Run Compliance Controls'
         uses:  Omegapoint/cydig-compliance-action@v1
         with:
           PAT-token: ${{ secrets.MY_GITHUB_PAT }}
-          cydigConfigPath: ${{ env.configFile }}
+          cydigConfigPath: ${{ env.pathCydigConfig }}
     
       - name: 'Run Upload Compliance State'
         id: upload
         uses: Omegapoint/upload-compliance-state-action@v1
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          cydigConfigPath: ${{ env.configFile }}
+          cydigConfigPath: ${{ env.pathCydigConfig }}
 
       - name: 'Get Upload Action results'
         run: |
