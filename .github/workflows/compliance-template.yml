@@ -43,8 +43,6 @@ jobs:
 
       - name: Set Input Variables
         run: |
-          echo "configFile=${{ env.configFile }}" >> $GITHUB_ENV
-          echo "disableWarningUsersInProd=${{ env.disableWarningUsersInProd }}" >> $GITHUB_ENV
           echo "threatModelingDate=${{ inputs.threatModelingDate }}" >> $GITHUB_ENV
           echo "pentestDate=${{ inputs.pentestDate }}" >> $GITHUB_ENV
 
