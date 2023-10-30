@@ -38,8 +38,8 @@ jobs:
            repository: ${{ env.repositoryCompliance }}
            path: ${{ env.pathCompliance }}
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      # - name: Install Node.js
+      #   uses: actions/setup-node@v3
 
       - name: Set Input Variables
         run: |
