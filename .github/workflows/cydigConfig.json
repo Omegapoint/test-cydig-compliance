@@ -1,0 +1,10 @@
+{
+    "teamName": "Linneas team", 
+    "usingAzure": true,
+    "threatModeling": {
+        "date": "2023-09-18"
+    },
+    "pentest": {
+        "date": "not specified"
+    }
+}
